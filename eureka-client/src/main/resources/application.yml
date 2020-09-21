@@ -1,0 +1,18 @@
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 30 #发送心跳的间隔
+    lease-expiration-duration-in-seconds: 90 #多久没发送就认为是宕机
+  server:
+    account: admin
+    password: root
+  client:
+    registry-fetch-interval-seconds: 30
+    service-url:
+      defaultZone: http://${eureka.server.account}:${eureka.server.password}@localhost:8021/eureka
+
+spring:
+  application:
+    name: client-test
+
+server:
+  port: 8031

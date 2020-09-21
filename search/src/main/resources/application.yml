@@ -1,0 +1,14 @@
+eureka:
+  server:
+    account: admin
+    password: root
+  client:
+    service-url:
+      defaultZone: http://${eureka.server.account}:${eureka.server.password}@localhost:8021/eureka
+
+spring:
+  application:
+    name: search
+
+server:
+  port: 8032

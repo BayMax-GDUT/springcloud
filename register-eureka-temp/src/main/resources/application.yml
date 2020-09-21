@@ -1,0 +1,26 @@
+
+eureka:
+  server:
+    enable-self-preservation: true
+    account: admin
+    password: root
+  instance:
+    hostname: localhost
+  client:
+    # 注册到eureka 单机版为false
+    registerWithEureka: true
+    # 从eureka获取注册信息 单机版为false
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.server.account}:${eureka.server.password}@${eureka.instance.hostname}:8021/eureka/
+
+server:
+  port: 8022
+
+spring:
+  application:
+    name: eureka-server
+  security:
+    user:
+      name: admin
+      password: root
