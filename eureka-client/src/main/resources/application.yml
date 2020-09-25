@@ -10,9 +10,20 @@ eureka:
     service-url:
       defaultZone: http://${eureka.server.account}:${eureka.server.password}@localhost:8021/eureka
 
+#指定具体服务的负载均衡策略
+SEARCH: #服务名称
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRibonRule  #具体使用的负载均衡策略的类
+
+#feign和hystrix的整合
+feign:
+  hystrix:
+    enabled: true
+
 spring:
   application:
     name: client-test
 
 server:
   port: 8031
+

@@ -7,9 +7,9 @@ eureka:
     hostname: localhost
   client:
     # 注册到eureka
-    registerWithEureka: true
+    registerWithEureka: false
     # 从eureka获取注册信息
-    fetchRegistry: true
+    fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.server.account}:${eureka.server.password}@${eureka.instance.hostname}:8022/eureka/
 
