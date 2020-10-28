@@ -19,7 +19,7 @@ server:
 
 spring:
   application:
-    name: eureka-server
+    name: EUREKA-SERVER
   security:
     user:
       name: admin

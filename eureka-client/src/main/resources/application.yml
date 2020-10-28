@@ -22,7 +22,7 @@ feign:
 
 spring:
   application:
-    name: client-test
+    name: CLIENT
 
 server:
   port: 8031

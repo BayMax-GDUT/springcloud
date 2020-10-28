@@ -3,12 +3,15 @@ eureka:
     account: admin
     password: root
   client:
+    registry-fetch-interval-seconds: 30
     service-url:
       defaultZone: http://${eureka.server.account}:${eureka.server.password}@localhost:8021/eureka
 
 spring:
   application:
-    name: SEARCH
+    name: ZUUL
 
 server:
-  port: 8032
+  port: 8023
+
+
