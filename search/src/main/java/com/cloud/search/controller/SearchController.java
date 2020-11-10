@@ -10,6 +10,14 @@ public class SearchController {
     @Value("${server.port}")
     private String port;
 
+    @Value("${version}")
+    private String version;
+
+    @GetMapping("/version")
+    public String getVersion() {
+        return version;
+    }
+
     @GetMapping("/search")
     public String search() {
         int i = 1/0;

@@ -6,9 +6,11 @@ eureka:
     service-url:
       defaultZone: http://${eureka.server.account}:${eureka.server.password}@localhost:8021/eureka
 
+version: v1
+
 spring:
   application:
-    name: SEARCH
+    name: SEARCH-${version}
 
 server:
   port: 8032

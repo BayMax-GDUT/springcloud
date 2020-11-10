@@ -14,4 +14,10 @@ spring:
 server:
   port: 8023
 
+#zuul监控界面(开发时配置为*，上线不要配置)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
